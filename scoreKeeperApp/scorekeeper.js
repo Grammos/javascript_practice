@@ -48,6 +48,14 @@ p2Button.addEventListener("click", function(){
 
 resetButton.addEventListener("click", function(){
 
+	reset();
+
+});
+
+
+
+function reset(){
+
 	p1Score = 0;
 	p2Score = 0;
 
@@ -58,8 +66,9 @@ resetButton.addEventListener("click", function(){
 	p2Display.classList.remove("winner");
 
 	gameOver = false;
+}
 
-});
+
 
 //everytime the winning score change,
 
@@ -67,7 +76,7 @@ numInput.addEventListener("change", function(){
 	//added the numbers to the MSG of the 'Playin to: the users' input
   winningScoreDisplay.textContent = numInput.value;
   winningScore = Number(numInput.value);
-
+  reset();
 });
 
 
