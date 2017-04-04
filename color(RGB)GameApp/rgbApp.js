@@ -17,6 +17,7 @@ var squares = document.querySelectorAll(".square");
 var pickedColor = colors[3];
 //updating the color which would start the game
 var colorDisplay = document.getElementById("colorDisplay");
+var messageDisplay = document.querySelector("#message");
 
 colorDisplay.textContent = pickedColor;
 
@@ -32,9 +33,10 @@ for(var i=0; i < squares.length; i++){
 	  //compare color to pickedColor
 	  if(clickedColor === pickedColor)
 	  {
-	  	alert("Correct");
+	  	messageDisplay.textContent = "Corret!";
 	  }else{
-	  	alert("Wrong!");
+	   this.style.background = "#232323";
+	   messageDisplay.textContent = "Try Again";
 	  }
 
 	});
