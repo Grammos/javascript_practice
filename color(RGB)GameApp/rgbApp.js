@@ -10,6 +10,7 @@ var pickedColor = pickColor();
 //updating the color which would start the game
 var colorDisplay = document.getElementById("colorDisplay");
 var messageDisplay = document.querySelector("#message");
+var h1 = document.querySelector("h1");
 
 colorDisplay.textContent = pickedColor;
 
@@ -23,11 +24,11 @@ for(var i=0; i < squares.length; i++){
 	  //grab color of clicked square
 	  var clickedColor = this.style.background;
 	  //compare color to pickedColor
-	  console.log(clickedColor, pickedColor);
 	  if(clickedColor === pickedColor)
 	  {
 	  	messageDisplay.textContent = "Corret!";
 	  	changeColors(clickedColor);
+	  	h1.style.background = clickedColor;
 	  }else{
 	   this.style.background = "#232323";
 	   messageDisplay.textContent = "Try Again";
