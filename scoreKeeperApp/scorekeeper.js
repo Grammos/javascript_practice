@@ -74,8 +74,8 @@ function reset(){
 
 numInput.addEventListener("change", function(){
 	//added the numbers to the MSG of the 'Playin to: the users' input
-  winningScoreDisplay.textContent = numInput.value;
-  winningScore = Number(numInput.value);
+  winningScoreDisplay.textContent = this.value;
+  winningScore = Number(this.value);
   reset();
 });
 
