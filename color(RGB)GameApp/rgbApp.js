@@ -1,5 +1,4 @@
-//adding a list of colors to the divs' square, a random one
-
+//a list of colors
 var colors = [
    "rgb(255, 0, 0)",
    "rgb(255, 255, 0)",
@@ -13,8 +12,8 @@ var colors = [
 //a color from the above list - refere this as A 
 var squares = document.querySelectorAll(".square");
 
-//picked color to start the game
-var pickedColor = colors[3];
+//picked a random color to start the game
+var pickedColor = pickColor();
 //updating the color which would start the game
 var colorDisplay = document.getElementById("colorDisplay");
 var messageDisplay = document.querySelector("#message");
@@ -50,5 +49,12 @@ function changeColors(color){
 	squares[i].style.background = color;
 	}
 
+}
+
+//random color picker 
+function pickColor(){
+	//picked a random color and return that
+	var random = Math.floor(Math.random() * colors.length);
+	return colors[random];
 }
 
